@@ -1,11 +1,12 @@
 
-List of keycodes in godot: (use the input map instead)
+List of keycodes in godot: (I would use the input map instead)
 https://github.com/godotengine/godot/blob/master/core/os/keyboard.h
 
 
-the input map lets you name types of input and assign things to them   ex. You could assign ‘w’ and UP to the name “up” and use that name in the script rather than using keycodes
 
 # Input map:
+
+the input map lets you name types of input and assign things to them   ex. You could assign ‘w’ and UP to the name “up” and use that name in the script rather than using keycodes
 
 Push project(top left)   
 project settings
@@ -41,8 +42,6 @@ if move_and_slide(velocity/2)[1]==0:
 if move_and_slide(velocity/2)[0]==0:
 	velocity.x =0;
 To move the object and reset velocity when it collides
-
-
 
 
 
