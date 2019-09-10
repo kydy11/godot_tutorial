@@ -15,9 +15,13 @@ Input map
 
 
 # 2D objects:
-Add (top left) kinamaticBody2D<br>
+Add (top left) kinamaticBody2D or StaticBody2D<br>
 Add to that a sprite and a CollisionShape2D<br>
-Add a texture to the sprite (otherwise it’s invisible)
+Add a texture to the sprite (otherwise it’s invisible)<br>
+in the kinamatic or static body use trasform to adjust it's position compared to the center.<br>
+in the collision shape add a shape.<br>
+click on the shape, set it's extend/radius/other.<br>
+on sprite, in transform adjust scale to the size you want.
 
 
 # 2D platformer movement:
