@@ -65,7 +65,3 @@ Right click in the position row under the timeline, push “add key”<br>
 Add a second key.<br>
 The first ‘key’ has the starting position, the second has the ending position.<br>
 
-
-
-# Physics
-func _physics_process(delta):         Is a loop
