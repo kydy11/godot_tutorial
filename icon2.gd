@@ -31,5 +31,7 @@ func _physics_process(delta):
 	
 	velocity.y += delta * GRAVITY * METERS;
 	
-	if move_and_slide(velocity)[1]==0:
+	if move_and_slide(velocity/2)[1]==0:
 		velocity.y =0;
+	if move_and_slide(velocity/2)[0]==0:
+		velocity.x =0;
