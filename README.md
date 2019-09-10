@@ -36,7 +36,7 @@ If Input.is_action_pressed(“left”):
 Velocity.y +=gravity *delta
 ```
 For jumping use:   
-```python
+```
 if Input.is_action_just_pressed("up") && velocity.y==0:
 ```
 At the end of the physics function use: <br>
