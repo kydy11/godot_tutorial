@@ -52,6 +52,24 @@ if move_and_slide(velocity/2)[0]==0:
 ```
 To move the object and reset velocity when it collides<br>
 
+# Area collisions:
+Standard collisions are automatically handled stopping movement, but if you need a collision with a different effect, for example doing damage or triggering an effect, you should use areas.<br>
+Anything that you want to have a special collision add a area2D to.<br>
+Add a collision shape to the area, set it up the same way as previous collision shapes.<br>
+Add a script to the aree.<br>
+In the _ready function, put connect().<br>
+The first parameter in connect is what you want to be detected. For example, if you want to detect a body entering use "body_entered", if you want to detect an area exiting use "area_exited".<br>
+The second parameter should most always be self.
+The third parameter is the name of the function you want activated by something entering or exiting. For example you could name something "on_body_enter".<br>
+
+ex.
+```python
+func _ready():
+    connect("body_entered", self, "on_body_entered")
+func on_body_entered(body):
+	print("stuff")
+```
+
 
 
 # Animation:
