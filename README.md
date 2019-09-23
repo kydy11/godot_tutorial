@@ -71,6 +71,38 @@ func on_body_entered(body):
 ```
 
 
+# Signals:
+Signals let you easily call functions from other scripts.<br>
+to use a signal first make a signal variable.
+```python
+signal damege_player(amount)
+```
+in
+```python
+func _ready():
+```
+set a variable equal to the node you want this script to send signals to, using get_node(nodepath).
+then connect it using connect(signalName, whereToSend, nameOfFunctionToCall)
+
+ex.
+```python
+extends Area2D
+
+signal damege_player(amount)
+
+func _ready():
+	var player =get_node("/root/Node2D/Player")
+	connect("body_entered", self, "on_body_entered")
+	connect("damege_player", player , "recieve_damege")
+func on_body_entered(body):
+	emit_signal("damege_player", 2)
+```
+with:
+```python
+func recieve_damege(amount):
+	health-=amount
+```
+in the other script.
 
 # Animation:
 Push the plus top left<br>
