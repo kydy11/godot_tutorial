@@ -8,9 +8,13 @@ var maxMoveSpeed =2;
 var jumpHight =4;
 var jumpTime =1;
 var currantJumpTime =0;
+var health =20;
 
 var velocity = Vector2()
 
+#func _ready():
+#	print(self.get_path())
+	
 
 func _physics_process(delta):
 	
@@ -63,3 +67,8 @@ func _physics_process(delta):
 		velocity.y =0;
 	if move_and_slide(velocity/2)[0]==0:
 		velocity.x =0;
+
+func recieve_damege(amount):
+	health-=amount
+	print(health)
+	
