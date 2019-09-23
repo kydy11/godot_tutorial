@@ -104,6 +104,12 @@ func recieve_damege(amount):
 ```
 in the other script.
 
+you can get the nodePath of a node by putting 
+```python
+print(self.get_path())
+```
+in it's script.
+
 # Animation:
 Push the plus top left<br>
 Add animation player<br>
