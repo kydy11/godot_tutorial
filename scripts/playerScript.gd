@@ -8,7 +8,7 @@ var maxMoveSpeed =2;
 var jumpHight =4;
 var jumpTime =1;
 var currantJumpTime =0;
-var health =20;
+var health =8;
 
 var velocity = Vector2()
 
@@ -70,5 +70,9 @@ func _physics_process(delta):
 
 func recieve_damege(amount):
 	health-=amount
-	print(health)
+	if(health <=0):
+		print("dead")
 	
+
+func enter_finish():
+	print("end")
