@@ -110,6 +110,10 @@ print(self.get_path())
 ```
 in it's script.
 
+
+# Objects
+right click on any segment you you want to reuse, select save branch as scene. for example you could save a static body, with a sprite and collision shape, to quickly make identicle things.
+
 # Animation:
 Push the plus top left<br>
 Add animation player<br>
