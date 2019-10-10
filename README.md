@@ -125,7 +125,35 @@ Example of a scene made from objects:<br>
 
 # Scenes:
 Your game will be made up of scenes.<br>
-I suggest you have one base scene that runs your other scenes using script.<br>
+I suggest you have one base scene that runs your other scenes using script.  Go to project settings, in run, change the main scene to your base scene.<br>
 To make a new scene click on Scene (top left) select new scene.<br>
+In the base scene script:<br>
+Either make a variable for each scene and load them in the ready function.  Make a currant scene variable.  In &#95;ready set currant scene to one of your scenes, use: ```add_child(currantScene.instance())```
+<br>
+or use:
+```python
+class Level:
 
+	var levelScene #scene
+	var levelInstance #instance of scene
+	var levelNumb #int
+	
+	
+	func _init(scene, numb):
+		levelNumb =numb
+		levelScene =scene
+		levelInstance =levelScene.instance()
+	
+	func reset_scene():
+		levelInstance =levelScene.instance()	
+	
+	func get_level_instance():
+		return levelInstance
+	
+	func get_level_numb():
+		return levelNumb
+```
 
+<br>
+create variables for each scene and a currant scene variable. in &#95;ready set the scene variables to Level.new() with the paramiters of the loaded scene and whatever number you want to assign to that scene. set the currant scene to one of the other scenes, and use: ```add_child(currantScene.get_level_instance())``` 
+<br>
