@@ -11,9 +11,11 @@ var currantJumpTime =0;
 var health =8;
 
 var velocity = Vector2()
+signal player_died
 
-#func _ready():
-#	print(self.get_path())
+func _ready():
+	var game =get_node("/root/Game")
+	connect("player_died", game , "handle_death")
 	
 
 func _physics_process(delta):
@@ -66,13 +68,15 @@ func _physics_process(delta):
 	if move_and_slide(velocity/2)[1]==0:
 		velocity.y =0;
 	if move_and_slide(velocity/2)[0]==0:
-		velocity.x =0;
+		if velocity.x >0:
+			velocity.x = 0.05 *METERS;
+		elif velocity.x <0:
+			velocity.x = -0.05 *METERS;
+		elif velocity.x == 0:
+			velocity.x = 0
 
 func recieve_damege(amount):
 	health-=amount
 	if(health <=0):
-		print("dead")
+		emit_signal("player_died")
 	
-
-func enter_finish():
-	print("end")

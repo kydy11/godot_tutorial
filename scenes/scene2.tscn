@@ -1,0 +1,60 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://objects/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://objects/Floor.tscn" type="PackedScene" id=2]
+[ext_resource path="res://objects/EndArea.tscn" type="PackedScene" id=3]
+[ext_resource path="res://objects/Block.tscn" type="PackedScene" id=4]
+[ext_resource path="res://objects/BoundryLine.tscn" type="PackedScene" id=5]
+[ext_resource path="res://objects/DamageBlock.tscn" type="PackedScene" id=6]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( -999.731, 667.52 )
+
+[node name="Floor" parent="." instance=ExtResource( 2 )]
+position = Vector2( 9.27258, 781.989 )
+
+[node name="EndArea" parent="." instance=ExtResource( 3 )]
+position = Vector2( 701.626, 358.54 )
+
+[node name="Block" parent="." instance=ExtResource( 4 )]
+position = Vector2( 434.811, 618.679 )
+
+[node name="Block2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 686.172, 435.812 )
+
+[node name="BottomBoundry" parent="." instance=ExtResource( 5 )]
+position = Vector2( 0, 1000 )
+
+[node name="RightBoundry" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2000, 0 )
+rotation = 1.5708
+
+[node name="LeftBoundry" parent="." instance=ExtResource( 5 )]
+position = Vector2( -2000, 0 )
+rotation = 1.5708
+
+[node name="TopBoundry" parent="." instance=ExtResource( 5 )]
+position = Vector2( 0, 100 )
+
+[node name="Area2D2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 106.168, 698.656 )
+
+[node name="Area2D3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 767.152, 674.683 )
+
+[node name="Area2D4" parent="." instance=ExtResource( 6 )]
+position = Vector2( -796.191, 715.637 )
+
+[node name="Area2D5" parent="." instance=ExtResource( 6 )]
+position = Vector2( -491.99, 711.32 )
+
+[node name="Area2D6" parent="." instance=ExtResource( 6 )]
+position = Vector2( -635.888, 711.32 )
+
+[node name="Area2D7" parent="." instance=ExtResource( 6 )]
+position = Vector2( -708.931, 712.212 )
+
+[node name="Block3" parent="." instance=ExtResource( 4 )]
+position = Vector2( -564.312, 710.945 )

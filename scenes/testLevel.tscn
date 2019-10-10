@@ -3,9 +3,10 @@
 [ext_resource path="res://objects/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://objects/Floor.tscn" type="PackedScene" id=2]
 [ext_resource path="res://objects/Block.tscn" type="PackedScene" id=3]
-[ext_resource path="res://objects/damageBlock.tscn" type="PackedScene" id=4]
+[ext_resource path="res://objects/DamageBlock.tscn" type="PackedScene" id=4]
 [ext_resource path="res://objects/EndArea.tscn" type="PackedScene" id=5]
 [ext_resource path="res://objects/BoundryLine.tscn" type="PackedScene" id=6]
+
 
 [node name="Node2D" type="Node2D"]
 __meta__ = {

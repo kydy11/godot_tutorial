@@ -2,12 +2,11 @@
 
 [ext_resource path="res://scripts/boundryScript.gd" type="Script" id=1]
 
-
 [sub_resource type="SegmentShape2D" id=1]
 a = Vector2( -100, 0 )
 b = Vector2( 100, 0 )
 
-[node name="Area2D" type="Area2D"]
+[node name="BoundryLine" type="Area2D"]
 scale = Vector2( 100, 5 )
 script = ExtResource( 1 )
 

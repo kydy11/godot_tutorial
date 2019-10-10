@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://objects/DamageBlock.tscn" type="PackedScene" id=1]
+[ext_resource path="res://objects/Floor.tscn" type="PackedScene" id=2]
+[ext_resource path="res://objects/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://objects/EndArea.tscn" type="PackedScene" id=4]
+[ext_resource path="res://objects/Block.tscn" type="PackedScene" id=5]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="DamegeBlock" parent="." instance=ExtResource( 1 )]
+position = Vector2( -92.814, 524.508 )
+
+[node name="Floor" parent="." instance=ExtResource( 2 )]
+position = Vector2( 4.31696, 595.737 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( -356.147, 528.824 )
+
+[node name="EndArea" parent="." instance=ExtResource( 4 )]
+position = Vector2( 360.464, 384.207 )
+
+[node name="Block" parent="." instance=ExtResource( 5 )]
+position = Vector2( 235.273, 470.546 )
+
+[node name="DamegeBlock2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 233.114, 379.89 )
+
+[node name="DamegeBlock3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 56.1201, 524.508 )
