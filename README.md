@@ -124,22 +124,8 @@ Example of a scene made from objects:<br>
 ![](https://github.com/kydy11/godotThing/blob/master/totorialImages/scene%20of%20objects.PNG)
 
 # Scenes:
-click on Scene (top left) select new scene.
+Your game will be made up of scenes.<br>
+I suggest you have one base scene that runs your other scenes using script.<br>
+To make a new scene click on Scene (top left) select new scene.<br>
 
-
-
-# Animation:
-Push the plus top left<br>
-Add animation player<br>
-
-Add sprite to player<br>
-
-With player selected push “animation” bottom middle, select new<br>
-
-Push add track to the animation you made. Select “property track”v<br>
-Select the sprite, select the property you want to adjust (probably position)<br>
-
-Right click in the position row under the timeline, push “add key”<br>
-Add a second key.<br>
-The first ‘key’ has the starting position, the second has the ending position.<br>
 
