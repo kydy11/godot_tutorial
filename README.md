@@ -111,8 +111,16 @@ print(self.get_path())
 in it's script.
 
 
-# Objects
-right click on any segment you you want to reuse, select save branch as scene. for example you could save a static body, with a sprite and collision shape, to quickly make identicle things.
+# Objects:
+right click on any segment you you want to reuse, select save branch as scene. for example you could save a static body, with a sprite and collision shape, to quickly make identicle things. I would suggest doing this to everything and just using your objects to create your scenes.  These are called scenes but I will call them objects to differentiat between these segments and the scenes that use them. <br>
+I would place everything you save this way in one folder.<br>
+To add an object to the scene push this button:
+
+
+# Scenes:
+click on Scene (top left) select new scene.
+
+
 
 # Animation:
 Push the plus top left<br>
