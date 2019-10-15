@@ -108,7 +108,7 @@ you can get the nodePath of a node by putting
 ```python
 print(self.get_path())
 ```
-in it's script.
+in its ready script.
 
 
 # Objects:
@@ -163,7 +163,7 @@ ex.
 ```python
 func change_scene(scene):
 	currantLevel.get_level_instance().call_deferred("free")
-	lastLevel=currantLevel
+	lastLevel =currantLevel
 	currantLevel =scene
 	currantLevel.reset_scene()
 	call_deferred("add_child", currantLevel.get_level_instance())
