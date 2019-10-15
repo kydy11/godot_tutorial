@@ -124,6 +124,7 @@ Example of a scene made from objects:<br>
 ![](https://github.com/kydy11/godotThing/blob/master/totorialImages/scene%20of%20objects.PNG)
 
 # Scenes:
+###### all code in this section can be found in scripts/game.gd.
 Your game will be made up of scenes.<br>
 I suggest you have one base scene that runs your other scenes using script.  Go to project settings, in run, change the main scene to your base scene.<br>
 To make a new scene click on Scene (top left) select new scene.<br>
