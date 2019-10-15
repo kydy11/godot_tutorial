@@ -154,6 +154,17 @@ class Level:
 		return levelNumb
 ```
 
+create variables for each scene and a currant scene variable. in &#95;ready set the scene variables to Level.new() with the paramiters of the loaded scene and whatever number you want to assign to that scene. set the currant scene to one of the other scenes, and use: ```add_child(currantScene.get_level_instance())```
 <br>
-create variables for each scene and a currant scene variable. in &#95;ready set the scene variables to Level.new() with the paramiters of the loaded scene and whatever number you want to assign to that scene. set the currant scene to one of the other scenes, and use: ```add_child(currantScene.get_level_instance())``` 
 <br>
+Make a function to change scenes, have it take one peramiter.
+Use ```(scene instance).call_deferred("free")``` to remove a scene, then ```call_deferred("add_child", (scene instance) )``` to add a new one.<br>
+ex.
+```python
+func change_scene(scene):
+	currantLevel.get_level_instance().call_deferred("free")
+	lastLevel=currantLevel
+	currantLevel =scene
+	currantLevel.reset_scene()
+	call_deferred("add_child", currantLevel.get_level_instance())
+```
