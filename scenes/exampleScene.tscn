@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://objects/DamageBlock.tscn" type="PackedScene" id=1]
 [ext_resource path="res://objects/Floor.tscn" type="PackedScene" id=2]
 [ext_resource path="res://objects/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://objects/EndArea.tscn" type="PackedScene" id=4]
 [ext_resource path="res://objects/Block.tscn" type="PackedScene" id=5]
+[ext_resource path="res://objects/Doorway.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Doorway.gd" type="Script" id=7]
+[ext_resource path="res://objects/doubleLatter.tscn" type="PackedScene" id=8]
 
 [node name="Node2D" type="Node2D"]
 
@@ -18,7 +21,7 @@ position = Vector2( 4.31696, 595.737 )
 position = Vector2( -356.147, 528.824 )
 
 [node name="EndArea" parent="." instance=ExtResource( 4 )]
-position = Vector2( 360.464, 384.207 )
+position = Vector2( 709.152, 68.9928 )
 
 [node name="Block" parent="." instance=ExtResource( 5 )]
 position = Vector2( 235.273, 470.546 )
@@ -28,3 +31,23 @@ position = Vector2( 233.114, 379.89 )
 
 [node name="DamegeBlock3" parent="." instance=ExtResource( 1 )]
 position = Vector2( 56.1201, 524.508 )
+
+[node name="Doorway" parent="." instance=ExtResource( 6 )]
+position = Vector2( 698.852, 525.748 )
+script = ExtResource( 7 )
+
+[node name="Doorway2" parent="." instance=ExtResource( 6 )]
+position = Vector2( -547.083, 516.174 )
+script = ExtResource( 7 )
+
+[node name="doubleLatter" parent="." instance=ExtResource( 8 )]
+position = Vector2( 772.693, 306.846 )
+scale = Vector2( 1.5, 1.66 )
+
+[node name="Doorway3" parent="." instance=ExtResource( 6 )]
+position = Vector2( -13.9476, 527.217 )
+script = ExtResource( 7 )
+
+[node name="Doorway4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 463.058, 521.638 )
+script = ExtResource( 7 )

@@ -19,6 +19,10 @@ config/name="godotThing"
 run/main_scene="res://scenes/game.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+doorID="*res://scripts/doorID.gd"
+
 [input]
 
 left={

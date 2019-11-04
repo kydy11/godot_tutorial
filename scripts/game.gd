@@ -42,6 +42,10 @@ var menu
 var level2
 var deathMenu
 var level3
+var exampleLevel
+var level4
+
+var player
 
 
 func _ready():
@@ -50,6 +54,8 @@ func _ready():
 	level2 =Level.new(load("res://scenes/scene2.tscn"), 11)
 	deathMenu =Level.new(load("res://scenes/deathMenu.tscn"),100)
 	level3 =Level.new(load("res://scenes/level3.tscn"),101)
+	exampleLevel =Level.new(load("res://scenes/exampleScene.tscn"),110)
+	level4 =Level.new(load("res://scenes/level4.tscn"),111)
 	
 	#testLevel = testLevel.newLevel(load("res://scenes/testLevel.tscn"), 1)
 	#menu =menu.newLevel(load("res://scenes/menu.tscn"), 10)
@@ -65,7 +71,6 @@ func change_scene(scene):
 	currantLevel =scene
 	currantLevel.reset_scene()
 	call_deferred("add_child", currantLevel.get_level_instance())
-	
 
 
 func enter_finish():
@@ -74,7 +79,28 @@ func enter_finish():
 	elif currantLevel.get_level_numb() == level2.get_level_numb():
 		change_scene(level3)
 	elif currantLevel.get_level_numb() == level3.get_level_numb():
+		change_scene(exampleLevel)
+	elif currantLevel.get_level_numb() == exampleLevel.get_level_numb():
+		change_scene(level4)
+	elif currantLevel.get_level_numb() == level4.get_level_numb():
 		change_scene(menu)
+
+var inDoor =false
+func enter_door(id):
+	player =get_node("/root/Game/Node2D/Player")
+	if(inDoor):
+		inDoor =false
+	else:
+		inDoor =true
+		var linkedDoorId
+		if(id%2==0):
+			linkedDoorId =id+1
+		else:
+			linkedDoorId =id-1
+		var linkedPos =doorID.get_door_pos(linkedDoorId)
+		player.set_position(linkedPos)
+		
+	
 
 ####### simple signals
 func hit_boundry():
