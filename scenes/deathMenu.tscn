@@ -1,17 +1,19 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://objects/ButtonTemplate.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scripts/toMenuBt.gd" type="Script" id=2]
-[ext_resource path="res://scripts/continueBt.gd" type="Script" id=3]
+[ext_resource path="res://scripts/buttons/toMenuBt.gd" type="Script" id=2]
+[ext_resource path="res://scripts/buttons/continueBt.gd" type="Script" id=3]
+[ext_resource path="res://scripts/buttons/LevelSelectBtn.gd" type="Script" id=4]
+
 
 [node name="Control" type="Control"]
 margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="Button" parent="." instance=ExtResource( 1 )]
-margin_left = 432.722
+margin_left = 435.0
 margin_top = 374.158
-margin_right = 632.722
+margin_right = 635.0
 margin_bottom = 449.158
 text = "Menu"
 script = ExtResource( 2 )
@@ -23,3 +25,11 @@ margin_right = 635.983
 margin_bottom = 258.831
 text = "Continue"
 script = ExtResource( 3 )
+
+[node name="Button3" parent="." instance=ExtResource( 1 )]
+margin_left = 435.975
+margin_top = 507.735
+margin_right = 635.975
+margin_bottom = 582.735
+text = "Level Select"
+script = ExtResource( 4 )

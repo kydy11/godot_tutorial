@@ -4,10 +4,10 @@ var nextID =0
 var doorPaths =[]
 var doorPositions =[]
 
-func assign_id(path, pos):
+func assign_id( pos):
 		var id =nextID
 		nextID +=1
-		doorPaths.append(path)
+		#doorPaths.append(path)
 		doorPositions.append(pos)
 		return id
 	

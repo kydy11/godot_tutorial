@@ -8,7 +8,8 @@ var game
 signal enteredDoorway(doorid)
 
 func _init():
-	id =doorID.assign_id(self.get_path(), self.get_position())
+	#id =doorID.assign_id(self.get_path(), self.get_position())
+	id =doorID.assign_id(self.get_position())
 
 func _ready():
 	player =get_node("/root/Game/Node2D/Player")

@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://objects/doubleLatter.tscn" type="PackedScene" id=1]
+[ext_resource path="res://objects/DoubleLatter.tscn" type="PackedScene" id=1]
 [ext_resource path="res://objects/Floor.tscn" type="PackedScene" id=2]
 [ext_resource path="res://objects/BoundryLine.tscn" type="PackedScene" id=3]
 [ext_resource path="res://objects/Block.tscn" type="PackedScene" id=4]
-[ext_resource path="res://objects/damageBlock.tscn" type="PackedScene" id=5]
+[ext_resource path="res://objects/DamageBlock.tscn" type="PackedScene" id=5]
 [ext_resource path="res://objects/EndArea.tscn" type="PackedScene" id=6]
 [ext_resource path="res://objects/Doorway.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Doorway.gd" type="Script" id=8]
@@ -40,7 +40,7 @@ position = Vector2( 8.60913, 3414.27 )
 position = Vector2( 16.9761, -952.885 )
 
 [node name="BoundryLine3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 7554.1, 876.145 )
+position = Vector2( 7587.69, 825.758 )
 rotation = 1.5708
 
 [node name="BoundryLine4" parent="." instance=ExtResource( 3 )]
@@ -61,13 +61,13 @@ position = Vector2( 6092.9, 2449.46 )
 position = Vector2( -1664.42, -169.698 )
 
 [node name="Block3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 498.697, 2657.95 )
+position = Vector2( 297.638, 2647.08 )
 
 [node name="Block4" parent="." instance=ExtResource( 4 )]
 position = Vector2( 1098.43, 495.101 )
 
 [node name="Block5" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1538.32, -194.374 )
+position = Vector2( 1552.74, -172.744 )
 
 [node name="Block6" parent="." instance=ExtResource( 4 )]
 position = Vector2( 4772.09, 2375.25 )
@@ -79,7 +79,7 @@ position = Vector2( -1416.03, -245.146 )
 position = Vector2( -883.85, -136.722 )
 
 [node name="DamegeBlock" parent="." instance=ExtResource( 5 )]
-position = Vector2( -608.428, 2678.05 )
+position = Vector2( -668.202, 2716.09 )
 
 [node name="DamegeBlock2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1310, -211.78 )
@@ -88,19 +88,19 @@ position = Vector2( 1310, -211.78 )
 position = Vector2( 1062.38, -184.94 )
 
 [node name="DamegeBlock4" parent="." instance=ExtResource( 5 )]
-position = Vector2( -861.755, 2675.92 )
+position = Vector2( -867.189, 2724.83 )
 
 [node name="DamegeBlock5" parent="." instance=ExtResource( 5 )]
 position = Vector2( 5286.45, 2412.04 )
 
 [node name="DamegeBlock6" parent="." instance=ExtResource( 5 )]
-position = Vector2( -999.356, 2671.8 )
+position = Vector2( -1010.22, 2704.4 )
 
 [node name="DamegeBlock7" parent="." instance=ExtResource( 5 )]
-position = Vector2( -84.4478, 2685.75 )
+position = Vector2( -73.5796, 2745.52 )
 
 [node name="DamegeBlock8" parent="." instance=ExtResource( 5 )]
-position = Vector2( 222.716, 2665.32 )
+position = Vector2( 244.452, 2741.4 )
 
 [node name="DamegeBlock9" parent="." instance=ExtResource( 5 )]
 position = Vector2( -1156.44, -181.808 )
@@ -117,7 +117,7 @@ position = Vector2( 6258.06, 2451.61 )
 script = ExtResource( 8 )
 
 [node name="Doorway2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 646.464, 1978.57 )
+position = Vector2( 624.728, 2011.17 )
 script = ExtResource( 8 )
 
 [node name="Doorway3" parent="." instance=ExtResource( 7 )]
@@ -125,7 +125,7 @@ position = Vector2( 4756.73, 2465.33 )
 script = ExtResource( 8 )
 
 [node name="Doorway4" parent="." instance=ExtResource( 7 )]
-position = Vector2( 156.718, 1958.98 )
+position = Vector2( -220.174, 2023.96 )
 script = ExtResource( 8 )
 
 [node name="Doorway5" parent="." instance=ExtResource( 7 )]
@@ -133,19 +133,19 @@ position = Vector2( 5202.64, 2457.03 )
 script = ExtResource( 8 )
 
 [node name="Doorway6" parent="." instance=ExtResource( 7 )]
-position = Vector2( -1544.26, -149.535 )
+position = Vector2( -530.549, 2007.85 )
 script = ExtResource( 8 )
 
 [node name="Doorway7" parent="." instance=ExtResource( 7 )]
-position = Vector2( -1076.07, 359.692 )
+position = Vector2( -960.585, 141.954 )
 script = ExtResource( 8 )
 
 [node name="Doorway8" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1299.01, 2099.95 )
+position = Vector2( 1346.61, 2173.35 )
 script = ExtResource( 8 )
 
 [node name="Doorway9" parent="." instance=ExtResource( 7 )]
-position = Vector2( -235.078, 1958.98 )
+position = Vector2( 1699.95, -155.144 )
 script = ExtResource( 8 )
 
 [node name="Doorway10" parent="." instance=ExtResource( 7 )]
@@ -161,7 +161,7 @@ position = Vector2( -783.744, 1999.02 )
 script = ExtResource( 8 )
 
 [node name="Doorway13" parent="." instance=ExtResource( 7 )]
-position = Vector2( -1161.67, 2067.66 )
+position = Vector2( -1187.66, 2002.68 )
 script = ExtResource( 8 )
 
 [node name="Doorway14" parent="." instance=ExtResource( 7 )]
@@ -181,7 +181,7 @@ position = Vector2( -733.675, -146.557 )
 script = ExtResource( 8 )
 
 [node name="Doorway18" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1647.43, -157.949 )
+position = Vector2( 178.849, 2012.43 )
 script = ExtResource( 8 )
 
 [node name="Doorway19" parent="." instance=ExtResource( 7 )]

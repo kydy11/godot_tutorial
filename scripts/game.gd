@@ -41,6 +41,7 @@ var testLevel
 var menu
 var level2
 var deathMenu
+var levelSelect
 var level3
 var exampleLevel
 var level4
@@ -56,6 +57,7 @@ func _ready():
 	level3 =Level.new(load("res://scenes/level3.tscn"),101)
 	exampleLevel =Level.new(load("res://scenes/exampleScene.tscn"),110)
 	level4 =Level.new(load("res://scenes/level4.tscn"),111)
+	levelSelect =Level.new(load("res://scenes/LevelSelectMenu.tscn"),1000)
 	
 	#testLevel = testLevel.newLevel(load("res://scenes/testLevel.tscn"), 1)
 	#menu =menu.newLevel(load("res://scenes/menu.tscn"), 10)
@@ -108,6 +110,18 @@ func hit_boundry():
 
 func start_bt_pressed():
 	change_scene(testLevel)
+
+func level_select_bt_pressed():
+	change_scene(levelSelect)
+
+func level2_bt_pressed():
+	change_scene(level2)
+func level3_bt_pressed():
+	change_scene(level3)
+func level4_bt_pressed():
+	change_scene(exampleLevel)
+func level5_bt_pressed():
+	change_scene(level4)
 
 func to_menu():
 	change_scene(menu)
