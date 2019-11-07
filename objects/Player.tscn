@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts/playerScript.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 29, 30 )
@@ -27,10 +28,6 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 2 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
-smoothing_enabled = true
-
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2( -29, -29 )
 scale = Vector2( 0.25, 0.01 )
@@ -40,3 +37,9 @@ shape = SubResource( 3 )
 position = Vector2( 29, -29 )
 scale = Vector2( 0.25, 0.01 )
 shape = SubResource( 3 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+smoothing_enabled = true
+
+[node name="HUD" parent="." instance=ExtResource( 3 )]

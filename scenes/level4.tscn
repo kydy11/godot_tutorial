@@ -64,10 +64,10 @@ position = Vector2( -1664.42, -169.698 )
 position = Vector2( 297.638, 2647.08 )
 
 [node name="Block4" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1098.43, 495.101 )
+position = Vector2( 1422.11, 391.967 )
 
 [node name="Block5" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1552.74, -172.744 )
+position = Vector2( 1552.74, -188.611 )
 
 [node name="Block6" parent="." instance=ExtResource( 4 )]
 position = Vector2( 4772.09, 2375.25 )
@@ -82,10 +82,10 @@ position = Vector2( -883.85, -136.722 )
 position = Vector2( -668.202, 2716.09 )
 
 [node name="DamegeBlock2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1310, -211.78 )
+position = Vector2( 1222.73, -184.807 )
 
 [node name="DamegeBlock3" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1062.38, -184.94 )
+position = Vector2( 983.047, -151.62 )
 
 [node name="DamegeBlock4" parent="." instance=ExtResource( 5 )]
 position = Vector2( -867.189, 2724.83 )
@@ -145,7 +145,7 @@ position = Vector2( 1346.61, 2173.35 )
 script = ExtResource( 8 )
 
 [node name="Doorway9" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1699.95, -155.144 )
+position = Vector2( 1714.23, -145.624 )
 script = ExtResource( 8 )
 
 [node name="Doorway10" parent="." instance=ExtResource( 7 )]
@@ -153,7 +153,7 @@ position = Vector2( -1024.98, -154.754 )
 script = ExtResource( 8 )
 
 [node name="Doorway11" parent="." instance=ExtResource( 7 )]
-position = Vector2( 898.669, -163.606 )
+position = Vector2( 816.162, -147.739 )
 script = ExtResource( 8 )
 
 [node name="Doorway12" parent="." instance=ExtResource( 7 )]
@@ -165,15 +165,15 @@ position = Vector2( -1187.66, 2002.68 )
 script = ExtResource( 8 )
 
 [node name="Doorway14" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1194.4, -161.721 )
+position = Vector2( 1143.63, -141.094 )
 script = ExtResource( 8 )
 
 [node name="Doorway15" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1399.73, -164.261 )
+position = Vector2( 1374.34, -145.221 )
 script = ExtResource( 8 )
 
 [node name="Doorway16" parent="." instance=ExtResource( 7 )]
-position = Vector2( 1204.41, 510.644 )
+position = Vector2( 1623.29, 472.564 )
 script = ExtResource( 8 )
 
 [node name="Doorway17" parent="." instance=ExtResource( 7 )]
