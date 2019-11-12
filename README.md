@@ -25,7 +25,7 @@ on sprite, in transform adjust scale to the size you want.
 
 
 # 2D platformer movement:
-Add a script to the kinamatic body<br>
+Add a script to the kinematic body<br>
 make a variable set to Vector2() (var velocity = Vector2() )<br>
 make a variable for gravity<br>
 use func _physics_process(delta): <br>
