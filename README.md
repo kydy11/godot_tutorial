@@ -18,14 +18,14 @@ Input map
 Add (top left) kinamaticBody2D or StaticBody2D<br>
 Add to that a sprite and a CollisionShape2D<br>
 Add a texture to the sprite (otherwise it’s invisible)<br>
-in the kinamatic or static body use trasform to adjust it's position compared to the center.<br>
+in the kinematic or static body use transform to adjust it's position compared to the center.<br>
 in the collision shape add a shape.<br>
 click on the shape, set it's extend/radius/other.<br>
 on sprite, in transform adjust scale to the size you want.
 
 
 # 2D platformer movement:
-Add a script to the kinamatic body<br>
+Add a script to the kinematic body<br>
 make a variable set to Vector2() (var velocity = Vector2() )<br>
 make a variable for gravity<br>
 use func _physics_process(delta): <br>
@@ -112,8 +112,8 @@ in its ready script.
 
 
 # Objects:
-right click on any segment you you want to reuse, select save branch as scene. for example you could save a static body, with a sprite and collision shape, to quickly make identicle things. I would suggest doing this to everything and just using your objects to create your scenes.  These are called scenes but I will call them objects to differentiat between these segments and the scenes that use them. <br>
-Examle of something saved this way:<br>
+right click on any segment you you want to reuse, select save branch as scene. for example you could save a static body, with a sprite and collision shape, to quickly make identical things. I would suggest doing this to everything and just using your objects to create your scenes. These are called scenes but I will call them objects to differentiate between these segments and  the scenes that use them. <br>
+Example of something saved this way:<br>
 ![](https://github.com/kydy11/godotThing/blob/master/totorialImages/saved%20object.PNG)
 <br>
 I would place everything you save this way in one folder.<br>
@@ -155,10 +155,10 @@ class Level:
 		return levelNumb
 ```
 
-create variables for each scene and a currant scene variable. in &#95;ready set the scene variables to Level.new() with the paramiters of the loaded scene and whatever number you want to assign to that scene. set the currant scene to one of the other scenes, and use: ```add_child(currantScene.get_level_instance())```
+create variables for each scene and a currant scene variable. in &#95;ready set the scene variables to Level.new() with the parameters of the loaded scene and whatever number you want to assign to that scene. set the currant scene to one of the other scenes, and use: ```add_child(currantScene.get_level_instance())```
 <br>
 <br>
-Make a function to change scenes, have it take one peramiter.
+Make a function to change scenes, have it take one parameter.
 Use ```(scene instance).call_deferred("free")``` to remove a scene, then ```call_deferred("add_child", (scene instance) )``` to add a new one.<br>
 ex.
 ```python
