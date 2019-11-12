@@ -112,7 +112,7 @@ in its ready script.
 
 
 # Objects:
-right click on any segment you you want to reuse, select save branch as scene. for example you could save a static body, with a sprite and collision shape, to quickly make identicle things. I would suggest doing this to everything and just using your objects to create your scenes.  These are called scenes but I will call them objects to differentiat between these segments and the scenes that use them. <br>
+right click on any segment you you want to reuse, select save branch as scene. for example you could save a static body, with a sprite and collision shape, to quickly make identical things. I would suggest doing this to everything and just using your objects to create your scenes. These are called scenes but I will call them objects to differentiate between these segments and  the scenes that use them. <br>
 Examle of something saved this way:<br>
 ![](https://github.com/kydy11/godotThing/blob/master/totorialImages/saved%20object.PNG)
 <br>
