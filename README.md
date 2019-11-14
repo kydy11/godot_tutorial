@@ -19,13 +19,13 @@ Create a new scene, and select custom node. (optional) <br>
 Create a KinematicBody, StaticBody, or Area2D. <br>
 Add a sprite and a CollisionShape2D to that. <br>
 Add a texture to the sprite.  (load it from resources) <br>
-![](https://github.com/kydy11/godotThing/blob/master/totorialImages/texture.PNG) <br>
+![](https://github.com/kydy11/godotThing/blob/master/totorialImages/texture.png) <br>
 In collision shape add a shape. <br>
-![](https://github.com/kydy11/godotThing/blob/master/totorialImages/shape%20add.PNG) <br>
+![](https://github.com/kydy11/godotThing/blob/master/totorialImages/shape%20add.png) <br>
 Click on the shape, set it's extend/radius/other, to set its size. <br>
-![](https://github.com/kydy11/godotThing/blob/master/totorialImages/collision%20size.PNG) <br>
+![](https://github.com/kydy11/godotThing/blob/master/totorialImages/collision%20size.png) <br>
 On sprite, in transform adjust scale to the size you want. <br>
-![](https://github.com/kydy11/godotThing/blob/master/totorialImages/transform.PNG) <br>
+![](https://github.com/kydy11/godotThing/blob/master/totorialImages/transform.png) <br>
 On the kinematicBody, StaticBody, or Area2D.  Adjust scale to change the overall size, rather than the size of an individual part. <br>
 If you created a new scene: save it in a folder, otherwise: right click on the KinematicBody, StaticBody, or Area2D, use ‘Save Branch as Scene’ to save it in a folder. <br>
 
@@ -33,7 +33,7 @@ If you created a new scene: save it in a folder, otherwise: right click on the K
 ###### all code in this section can be found in scripts/game.gd.
 Your game will be made up of scenes.<br>
 I suggest you have one base scene that runs your other scenes using script.  Go to project settings, in run, change the main scene to your base scene.<br>
-![](https://github.com/kydy11/godotThing/blob/master/totorialImages/change%20main%20scene.PNG) <br>
+![](https://github.com/kydy11/godotThing/blob/master/totorialImages/change%20main%20scene.png) <br>
 To make a new scene click on Scene (top left) select new scene.<br>
 In the base scene script:<br>
 Either make a variable for each scene and load them in the ready function.  Make a currant scene variable.  In &#95;ready set currant scene to one of your scenes, use: ```add_child(currantScene.instance())```
