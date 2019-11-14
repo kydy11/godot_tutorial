@@ -25,7 +25,7 @@ In collision shape add a shape. <br>
 Click on the shape, set it's extend/radius/other, to set its size. <br>
 ![](https://github.com/kydy11/godotThing/blob/master/totorialImages/collision%20size.PNG) <br>
 On sprite, in transform adjust scale to the size you want. <br>
-![](https://github.com/kydy11/godotThing/blob/master/totorialImages/saved%20object.PNG) <br>
+![](https://github.com/kydy11/godotThing/blob/master/totorialImages/transform.PNG) <br>
 On the kinematicBody, StaticBody, or Area2D.  Adjust scale to change the overall size, rather than the size of an individual part. <br>
 If you created a new scene: save it in a folder, otherwise: right click on the KinematicBody, StaticBody, or Area2D, use ‘Save Branch as Scene’ to save it in a folder. <br>
 
