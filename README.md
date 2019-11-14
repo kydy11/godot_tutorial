@@ -17,6 +17,7 @@ If you created a new scene: save it in a folder, otherwise: right click on the K
 ###### all code in this section can be found in scripts/game.gd.
 Your game will be made up of scenes.<br>
 I suggest you have one base scene that runs your other scenes using script.  Go to project settings, in run, change the main scene to your base scene.<br>
+![](https://github.com/kydy11/godotThing/blob/master/totorialImages/project.png) <br>
 ![](https://github.com/kydy11/godotThing/blob/master/totorialImages/change%20main%20scene.png) <br>
 To make a new scene click on Scene (top left) select new scene.<br>
 In the base scene script:<br>
@@ -72,7 +73,6 @@ You can add an object to your scene with this button: <br>
 the input map lets you name types of input and assign things to them   ex. You could assign ‘w’ and UP to the name “up” and use that name in the script for jumping rather than using keycodes.
 
 To adjust your imput map go to project settings <br>
-![](https://github.com/kydy11/godotThing/blob/master/totorialImages/project.png) <br>
 Go to Input map
 
 
