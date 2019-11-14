@@ -14,14 +14,73 @@ Input map
 
 
 
-# 2D objects:
-Add (top left) kinamaticBody2D or StaticBody2D<br>
-Add to that a sprite and a CollisionShape2D<br>
-Add a texture to the sprite (otherwise it’s invisible)<br>
-in the kinematic or static body use transform to adjust it's position compared to the center.<br>
-in the collision shape add a shape.<br>
-click on the shape, set it's extend/radius/other.<br>
-on sprite, in transform adjust scale to the size you want.
+# Objects:
+Create a new scene, and select custom node. (optional) <br>
+Create a KinematicBody, StaticBody, or Area2D. <br>
+Add a sprite and a CollisionShape2D to that. <br>
+Add a texture to the sprite.  (load it from resources) <br>
+![](https://github.com/kydy11/godotThing/blob/master/totorialImages/texture.png) <br>
+In collision shape add a shape. <br>
+![](https://github.com/kydy11/godotThing/blob/master/totorialImages/shape%20add.png) <br>
+Click on the shape, set it's extend/radius/other, to set its size. <br>
+![](https://github.com/kydy11/godotThing/blob/master/totorialImages/collision%20size.png) <br>
+On sprite, in transform adjust scale to the size you want. <br>
+![](https://github.com/kydy11/godotThing/blob/master/totorialImages/transform.png) <br>
+On the kinematicBody, StaticBody, or Area2D.  Adjust scale to change the overall size, rather than the size of an individual part. <br>
+If you created a new scene: save it in a folder, otherwise: right click on the KinematicBody, StaticBody, or Area2D, use ‘Save Branch as Scene’ to save it in a folder. <br>
+
+# Scenes:
+###### all code in this section can be found in scripts/game.gd.
+Your game will be made up of scenes.<br>
+I suggest you have one base scene that runs your other scenes using script.  Go to project settings, in run, change the main scene to your base scene.<br>
+![](https://github.com/kydy11/godotThing/blob/master/totorialImages/change%20main%20scene.png) <br>
+To make a new scene click on Scene (top left) select new scene.<br>
+In the base scene script:<br>
+Either make a variable for each scene and load them in the ready function.  Make a currant scene variable.  In &#95;ready set currant scene to one of your scenes, use: ```add_child(currantScene.instance())```
+<br>
+or use:
+```python
+class Level:
+
+	var levelScene #scene
+	var levelInstance #instance of scene
+	var levelNumb #int
+	
+	
+	func _init(scene, numb):
+		levelNumb =numb
+		levelScene =scene
+		levelInstance =levelScene.instance()
+	
+	func reset_scene():
+		levelInstance =levelScene.instance()	
+	
+	func get_level_instance():
+		return levelInstance
+	
+	func get_level_numb():
+		return levelNumb
+```
+
+create variables for each scene and a currant scene variable. in &#95;ready set the scene variables to Level.new() with the parameters of the loaded scene and whatever number you want to assign to that scene. set the currant scene to one of the other scenes, and use: ```add_child(currantScene.get_level_instance())```
+<br>
+<br>
+Make a function to change scenes, have it take one parameter.
+Use ```(scene instance).call_deferred("free")``` to remove a scene, then ```call_deferred("add_child", (scene instance) )``` to add a new one.<br>
+ex.
+```python
+func change_scene(scene):
+	currantLevel.get_level_instance().call_deferred("free")
+	lastLevel =currantLevel
+	currantLevel =scene
+	currantLevel.reset_scene()
+	call_deferred("add_child", currantLevel.get_level_instance())
+```
+<br>
+
+Build your scenes out of objects. <br>
+You can add an object to your scene with this button: <br>
+![](https://github.com/kydy11/godotThing/blob/master/totorialImages/connect%20scene.png)
 
 
 # 2D platformer movement:
@@ -110,62 +169,3 @@ print(self.get_path())
 ```
 in its ready script.
 
-
-# Objects:
-right click on any segment you you want to reuse, select save branch as scene. for example you could save a static body, with a sprite and collision shape, to quickly make identical things. I would suggest doing this to everything and just using your objects to create your scenes. These are called scenes but I will call them objects to differentiate between these segments and  the scenes that use them. <br>
-Example of something saved this way:<br>
-![](https://github.com/kydy11/godotThing/blob/master/totorialImages/saved%20object.PNG)
-<br>
-I would place everything you save this way in one folder.<br>
-To add an object to the scene push this button:
-![](https://github.com/kydy11/godotThing/blob/master/totorialImages/connect%20scene.png)
-
-Example of a scene made from objects:<br>
-![](https://github.com/kydy11/godotThing/blob/master/totorialImages/scene%20of%20objects.PNG)
-
-# Scenes:
-###### all code in this section can be found in scripts/game.gd.
-Your game will be made up of scenes.<br>
-I suggest you have one base scene that runs your other scenes using script.  Go to project settings, in run, change the main scene to your base scene.<br>
-To make a new scene click on Scene (top left) select new scene.<br>
-In the base scene script:<br>
-Either make a variable for each scene and load them in the ready function.  Make a currant scene variable.  In &#95;ready set currant scene to one of your scenes, use: ```add_child(currantScene.instance())```
-<br>
-or use:
-```python
-class Level:
-
-	var levelScene #scene
-	var levelInstance #instance of scene
-	var levelNumb #int
-	
-	
-	func _init(scene, numb):
-		levelNumb =numb
-		levelScene =scene
-		levelInstance =levelScene.instance()
-	
-	func reset_scene():
-		levelInstance =levelScene.instance()	
-	
-	func get_level_instance():
-		return levelInstance
-	
-	func get_level_numb():
-		return levelNumb
-```
-
-create variables for each scene and a currant scene variable. in &#95;ready set the scene variables to Level.new() with the parameters of the loaded scene and whatever number you want to assign to that scene. set the currant scene to one of the other scenes, and use: ```add_child(currantScene.get_level_instance())```
-<br>
-<br>
-Make a function to change scenes, have it take one parameter.
-Use ```(scene instance).call_deferred("free")``` to remove a scene, then ```call_deferred("add_child", (scene instance) )``` to add a new one.<br>
-ex.
-```python
-func change_scene(scene):
-	currantLevel.get_level_instance().call_deferred("free")
-	lastLevel =currantLevel
-	currantLevel =scene
-	currantLevel.reset_scene()
-	call_deferred("add_child", currantLevel.get_level_instance())
-```
