@@ -1,5 +1,5 @@
 # Objects:
-Create a new scene, and select custom node. (optional) <br>
+Create a new scene (scene button top left, it should dropdown), and select custom node. (optional) <br>
 Create a KinematicBody, StaticBody, or Area2D. <br>
 Add a sprite and a CollisionShape2D to that. <br>
 Add a texture to the sprite.  (load it from resources) <br>
@@ -16,10 +16,9 @@ If you created a new scene: save it in a folder, otherwise: right click on the K
 # Scenes:
 ###### all code in this section can be found in scripts/game.gd.
 Your game will be made up of scenes.<br>
-I suggest you have one base scene that runs your other scenes using script.  Go to project settings, in run, change the main scene to your base scene.<br>
+I suggest you have one base scene that runs your other scenes using script. Create your base scene. Go to project settings, in run, change the main scene to your base scene.<br>
 ![](https://github.com/kydy11/godotThing/blob/master/totorialImages/project.png) <br>
 ![](https://github.com/kydy11/godotThing/blob/master/totorialImages/change%20main%20scene.png) <br>
-To make a new scene click on Scene (top left) select new scene.<br>
 In the base scene script:<br>
 Either make a variable for each scene and load them in the ready function.  Make a currant scene variable.  In &#95;ready set currant scene to one of your scenes, use: ```add_child(currantScene.instance())```
 <br>
