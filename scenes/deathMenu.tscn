@@ -11,24 +11,24 @@ margin_bottom = 40.0
 
 [node name="Button" parent="." instance=ExtResource( 1 )]
 margin_left = 435.0
-margin_top = 374.158
+margin_top = 298.228
 margin_right = 635.0
-margin_bottom = 449.158
+margin_bottom = 373.228
 text = "Menu"
 script = ExtResource( 2 )
 
 [node name="Button2" parent="." instance=ExtResource( 1 )]
 margin_left = 435.983
-margin_top = 183.831
+margin_top = 131.611
 margin_right = 635.983
-margin_bottom = 258.831
+margin_bottom = 206.611
 text = "Continue"
 script = ExtResource( 3 )
 
 [node name="Button3" parent="." instance=ExtResource( 1 )]
 margin_left = 435.975
-margin_top = 507.735
+margin_top = 460.765
 margin_right = 635.975
-margin_bottom = 582.735
+margin_bottom = 535.765
 text = "Level Select"
 script = ExtResource( 4 )

@@ -10,7 +10,7 @@ margin_left = 5.0
 margin_top = 5.0
 margin_right = 55.0
 margin_bottom = 55.0
-text = "esc"
+text = "menu"
 script = ExtResource( 2 )
 
 [node name="Button2" parent="." instance=ExtResource( 1 )]

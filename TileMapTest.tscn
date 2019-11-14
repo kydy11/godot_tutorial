@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://objects/Floor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://objects/Block.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://objects/EndArea.tscn" type="PackedScene" id=4]
 [ext_resource path="res://objects/DamageBlock.tscn" type="PackedScene" id=5]
 [ext_resource path="res://objects/Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://objects/BoundryLine.tscn" type="PackedScene" id=7]
 
 [node name="TileMap" type="TileMap"]
 
@@ -86,3 +87,9 @@ position = Vector2( 690.257, -239.497 )
 
 [node name="Player" parent="." instance=ExtResource( 6 )]
 position = Vector2( -293.917, 470.695 )
+
+[node name="BoundryLine" parent="." instance=ExtResource( 7 )]
+position = Vector2( 59.7798, -600.125 )
+
+[node name="BoundryLine2" parent="." instance=ExtResource( 7 )]
+position = Vector2( -25.5261, 820.16 )
