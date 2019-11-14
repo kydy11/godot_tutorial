@@ -163,9 +163,6 @@ func recieve_damege(amount):
 ```
 in the other script.
 
-you can get the nodePath of a node by putting 
-```python
-print(self.get_path())
-```
+you can get the nodePath of a node by putting ``` print(self.get_path()) ```
 in its ready script.
 
