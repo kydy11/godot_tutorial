@@ -8,9 +8,9 @@ https://github.com/godotengine/godot/blob/master/core/os/keyboard.h
 
 the input map lets you name types of input and assign things to them   ex. You could assign ‘w’ and UP to the name “up” and use that name in the script rather than using keycodes
 
-Push project(top left)<br>   
-project settings<br>
-Input map
+To adjust your imput map go to project settings <br>
+![](https://github.com/kydy11/godotThing/blob/master/totorialImages/project.png) <br>
+Go to Input map
 
 
 
