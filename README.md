@@ -1,19 +1,3 @@
-
-List of keycodes in godot: (I would use the input map instead)
-https://github.com/godotengine/godot/blob/master/core/os/keyboard.h
-
-
-
-# Input map:
-
-the input map lets you name types of input and assign things to them   ex. You could assign ‘w’ and UP to the name “up” and use that name in the script rather than using keycodes
-
-To adjust your imput map go to project settings <br>
-![](https://github.com/kydy11/godotThing/blob/master/totorialImages/project.png) <br>
-Go to Input map
-
-
-
 # Objects:
 Create a new scene, and select custom node. (optional) <br>
 Create a KinematicBody, StaticBody, or Area2D. <br>
@@ -83,6 +67,19 @@ You can add an object to your scene with this button: <br>
 ![](https://github.com/kydy11/godotThing/blob/master/totorialImages/connect%20scene.png)
 
 
+# Input map:
+
+the input map lets you name types of input and assign things to them   ex. You could assign ‘w’ and UP to the name “up” and use that name in the script for jumping rather than using keycodes.
+
+To adjust your imput map go to project settings <br>
+![](https://github.com/kydy11/godotThing/blob/master/totorialImages/project.png) <br>
+Go to Input map
+
+
+Alternative to Input map that's kind of worse: Keycodes in godot:
+https://github.com/godotengine/godot/blob/master/core/os/keyboard.h
+
+
 # 2D platformer movement:
 Add a script to the kinematic body<br>
 make a variable set to Vector2() (var velocity = Vector2() )<br>
@@ -110,6 +107,8 @@ if move_and_slide(velocity/2)[0]==0:
 	velocity.x =0
 ```
 To move the object and reset velocity when it collides<br>
+
+
 
 # Area collisions:
 Standard collisions are automatically handled stopping movement, but if you need a collision with a different effect, for example doing damage or triggering an effect, you should use areas.<br>
