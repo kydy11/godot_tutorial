@@ -1,3 +1,12 @@
+# Start project:
+When godot opens push new project (right side) <br>
+Select browse <br>
+Create a new folder called "godot" <br>
+Create a folder with the name you want for your game <br>
+Push select current folder <br>
+Name your project <br>
+
+
 # Objects:
 Create a new scene (scene button top left, it should dropdown), and select custom node. (optional) <br>
 Create a KinematicBody, StaticBody, or Area2D. <br>
