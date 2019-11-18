@@ -86,7 +86,7 @@ You can add an object to your scene with this button: <br>
 Use the objects you have made and create new objects as you need them to build this level. <br> <br>
 
 Example of a level built from objects: <br>
-![](https://github.com/kydy11/godotThing/blob/master/totorialImages/scene%20of%20objects.png) <br>
+![](https://github.com/kydy11/godotThing/blob/master/totorialImages/scene%20of%20objects.PNG) <br>
 
 # Input map:
 
@@ -96,37 +96,33 @@ To adjust your imput map go to project settings <br>
 Go to Input map
 
 
-Alternative to Input map that's kind of worse: Keycodes in godot:
+Alternative to Input map that's kind of worse: Keycodes in godot
 https://github.com/godotengine/godot/blob/master/core/os/keyboard.h
 
 
 # 2D platformer movement:
-Add a script to the kinematic body<br>
-make a variable set to Vector2() (var velocity = Vector2() )<br>
+Add a script to the kinematic body of the player object. <br>
+make a variable set to Vector2() (```var velocity = Vector2()```) <br>
 make a variable for gravity<br>
-use func _physics_process(delta): <br>
-Use if Input.is_action_pressed(“ --whatever you named the input in input map-- ”):<br>
-Use += / -= for acceleration and = for constant velocity<br>
+use ```func _physics_process(delta):``` <br>
+Use ```if Input.is_action_pressed(“ --whatever you named the input in input map-- ”):```<br>
+Use += or -= for acceleration and = for constant velocity<br>
 delta is how often the function is called<br>
-Ex.<br>
-```python
-If Input.is_action_pressed(“left”):
-	velocity.x = -moveSpeed
-
-Velocity.y +=gravity *delta
-```
 For jumping use:   
 ```
 if Input.is_action_just_pressed("up") && velocity.y==0:
+	velocity.y =jumpHeight
 ```
 At the end of the physics function use: <br>
 ```python
+Velocity.y +=gravity *delta
+
 if move_and_slide(velocity/2)[1]==0:
 	velocity.y =0
 if move_and_slide(velocity/2)[0]==0:
 	velocity.x =0
 ```
-To move the object and reset velocity when it collides<br>
+To account for gravity, move the object, and reset velocity when it collides.<br>
 
 
 
