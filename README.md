@@ -8,7 +8,7 @@ Name your project <br>
 
 
 # Objects:
-Create a new scene (scene button top left, it should dropdown), and select custom node. (optional) <br>
+select custom node (left). <br>
 Create a KinematicBody, StaticBody, or Area2D. <br>
 Add a sprite and a CollisionShape2D to that. <br>
 Add a texture to the sprite.  (load it from resources) <br>
@@ -20,18 +20,24 @@ Click on the shape, set it's extend/radius/other, to set its size. <br>
 On sprite, in transform adjust scale to the size you want. <br>
 ![](https://github.com/kydy11/godotThing/blob/master/totorialImages/transform.png) <br>
 On the kinematicBody, StaticBody, or Area2D.  Adjust scale to change the overall size, rather than the size of an individual part. <br>
-If you created a new scene: save it in a folder, otherwise: right click on the KinematicBody, StaticBody, or Area2D, use ‘Save Branch as Scene’ to save it in a folder. <br>
+Save it in a folder (probably named "objects") <br> <br>
+
+Use this method to create several objects including your player and platform objects.
+
 
 # Scenes:
 ###### all code in this section can be found in scripts/game.gd.
 Your game will be made up of scenes.<br>
-I suggest you have one base scene that runs your other scenes using script. Create your base scene. Go to project settings, in run, change the main scene to your base scene.<br>
+I suggest you have one base scene that runs your other scenes using script. <br>
+Create a new scene called "game" or "base". <br>
+![](https://github.com/kydy11/godotThing/blob/master/totorialImages/new%20scene.png) <br>
+Go to project settings, in run, change the main scene to your base scene.<br>
 ![](https://github.com/kydy11/godotThing/blob/master/totorialImages/project.png) <br>
 ![](https://github.com/kydy11/godotThing/blob/master/totorialImages/change%20main%20scene.png) <br>
 In the base scene script:<br>
 Either make a variable for each scene and load them in the ready function.  Make a currant scene variable.  In &#95;ready set currant scene to one of your scenes, use: ```add_child(currantScene.instance())```
 <br>
-or use:
+or use a class:
 ```python
 class Level:
 
@@ -55,10 +61,12 @@ class Level:
 		return levelNumb
 ```
 
-create variables for each scene and a currant scene variable. in &#95;ready set the scene variables to Level.new() with the parameters of the loaded scene and whatever number you want to assign to that scene. set the currant scene to one of the other scenes, and use: ```add_child(currantScene.get_level_instance())```
+create variables for each scene and a currant scene variable. in &#95;ready set the scene variables to Level.new() with the parameters of the loaded scene and whatever number you want to assign to that scene. (to load a scene use ```load( scenePath)```) <br>
+ex. ```level2 = Level.new( load("res://scenes/level2.tscn"), 10)``` <br>
+set the currant scene to one of the other scenes, and use: ```add_child(currantScene.get_level_instance())```
 <br>
 <br>
-Make a function to change scenes, have it take one parameter.
+Make a function to change scenes, have it take the scene to change to as a parameter. <br>
 Use ```(scene instance).call_deferred("free")``` to remove a scene, then ```call_deferred("add_child", (scene instance) )``` to add a new one.<br>
 ex.
 ```python
@@ -71,10 +79,14 @@ func change_scene(scene):
 ```
 <br>
 
-Build your scenes out of objects. <br>
+Create a new scene for your first level. Select node2D. <br>
+Build your levels out of objects. <br>
 You can add an object to your scene with this button: <br>
-![](https://github.com/kydy11/godotThing/blob/master/totorialImages/connect%20scene.png)
+![](https://github.com/kydy11/godotThing/blob/master/totorialImages/connect%20scene.png) <br>
+Use the objects you have made and create new objects as you need them to build this level. <br> <br>
 
+Example of a level built from objects: <br>
+![](https://github.com/kydy11/godotThing/blob/master/totorialImages/scene%20of%20objects.png) <br>
 
 # Input map:
 
