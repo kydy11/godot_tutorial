@@ -3,12 +3,13 @@
 [ext_resource path="res://objects/Floor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://objects/Block.tscn" type="PackedScene" id=2]
 [ext_resource path="res://objects/Doorway.tscn" type="PackedScene" id=3]
-[ext_resource path="res://objects/EndArea.tscn" type="PackedScene" id=4]
-[ext_resource path="res://objects/DamageBlock.tscn" type="PackedScene" id=5]
-[ext_resource path="res://objects/Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Doorway.gd" type="Script" id=4]
+[ext_resource path="res://objects/EndArea.tscn" type="PackedScene" id=5]
+[ext_resource path="res://objects/DamageBlock.tscn" type="PackedScene" id=6]
 [ext_resource path="res://objects/BoundryLine.tscn" type="PackedScene" id=7]
 
 [node name="TileMap" type="TileMap"]
+format = 1
 
 [node name="Floor" parent="." instance=ExtResource( 1 )]
 position = Vector2( 418.688, 568.133 )
@@ -33,15 +34,19 @@ position = Vector2( 614.551, 160.662 )
 
 [node name="Doorway" parent="." instance=ExtResource( 3 )]
 position = Vector2( 412.669, 452.669 )
+script = ExtResource( 4 )
 
 [node name="Doorway2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 737.122, 474.3 )
+script = ExtResource( 4 )
 
 [node name="Doorway3" parent="." instance=ExtResource( 3 )]
 position = Vector2( -1.9093, 221.947 )
+script = ExtResource( 4 )
 
 [node name="Doorway4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 1176.94, -423.353 )
+script = ExtResource( 4 )
 
 [node name="Block7" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1176.94, -347.648 )
@@ -52,44 +57,41 @@ position = Vector2( 1101.23, -358.463 )
 [node name="Block9" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1281.48, -344.043 )
 
-[node name="EndArea" parent="." instance=ExtResource( 4 )]
+[node name="EndArea" parent="." instance=ExtResource( 5 )]
 position = Vector2( 881.324, -416.143 )
 
-[node name="DamegeBlock" parent="." instance=ExtResource( 5 )]
+[node name="DamegeBlock" parent="." instance=ExtResource( 6 )]
 position = Vector2( 163.922, 330.098 )
 
-[node name="DamegeBlock2" parent="." instance=ExtResource( 5 )]
+[node name="DamegeBlock2" parent="." instance=ExtResource( 6 )]
 position = Vector2( -16.3294, 452.669 )
 
-[node name="DamegeBlock3" parent="." instance=ExtResource( 5 )]
+[node name="DamegeBlock3" parent="." instance=ExtResource( 6 )]
 position = Vector2( 542.451, 431.039 )
 
-[node name="DamegeBlock4" parent="." instance=ExtResource( 5 )]
+[node name="DamegeBlock4" parent="." instance=ExtResource( 6 )]
 position = Vector2( 902.954, 431.039 )
 
-[node name="DamegeBlock5" parent="." instance=ExtResource( 5 )]
+[node name="DamegeBlock5" parent="." instance=ExtResource( 6 )]
 position = Vector2( 661.417, 221.947 )
 
-[node name="DamegeBlock6" parent="." instance=ExtResource( 5 )]
+[node name="DamegeBlock6" parent="." instance=ExtResource( 6 )]
 position = Vector2( 499.19, 34.4857 )
 
-[node name="DamegeBlock7" parent="." instance=ExtResource( 5 )]
+[node name="DamegeBlock7" parent="." instance=ExtResource( 6 )]
 position = Vector2( 957.029, -217.867 )
 
-[node name="DamegeBlock8" parent="." instance=ExtResource( 5 )]
+[node name="DamegeBlock8" parent="." instance=ExtResource( 6 )]
 position = Vector2( 827.248, -225.077 )
 
-[node name="DamegeBlock9" parent="." instance=ExtResource( 5 )]
+[node name="DamegeBlock9" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1130.07, -210.657 )
 
-[node name="DamegeBlock10" parent="." instance=ExtResource( 5 )]
+[node name="DamegeBlock10" parent="." instance=ExtResource( 6 )]
 position = Vector2( 690.257, -239.497 )
 
-[node name="Player" parent="." instance=ExtResource( 6 )]
-position = Vector2( -293.917, 470.695 )
-
 [node name="BoundryLine" parent="." instance=ExtResource( 7 )]
-position = Vector2( 59.7798, -600.125 )
+position = Vector2( 5.52045, -817.162 )
 
 [node name="BoundryLine2" parent="." instance=ExtResource( 7 )]
 position = Vector2( -25.5261, 820.16 )

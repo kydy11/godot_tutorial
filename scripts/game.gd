@@ -45,6 +45,7 @@ var levelSelect
 var level3
 var exampleLevel
 var level4
+var level5
 
 var player
 
@@ -58,6 +59,7 @@ func _ready():
 	exampleLevel =Level.new(load("res://scenes/exampleScene.tscn"),110)
 	level4 =Level.new(load("res://scenes/level4.tscn"),111)
 	levelSelect =Level.new(load("res://scenes/LevelSelectMenu.tscn"),1000)
+	level5 =Level.new(load("res://scenes/level5.tscn"),1001)
 	
 	#testLevel = testLevel.newLevel(load("res://scenes/testLevel.tscn"), 1)
 	#menu =menu.newLevel(load("res://scenes/menu.tscn"), 10)
@@ -85,6 +87,8 @@ func enter_finish():
 	elif currantLevel.get_level_numb() == exampleLevel.get_level_numb():
 		change_scene(level4)
 	elif currantLevel.get_level_numb() == level4.get_level_numb():
+		change_scene(level5)
+	elif currantLevel.get_level_numb() == level5.get_level_numb():
 		change_scene(menu)
 
 var inDoor =false

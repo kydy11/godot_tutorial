@@ -15,7 +15,8 @@ func _ready():
 	connect("player_entered_finish", game, "enter_finish")
 
 func on_body_entered(body):
-	emit_signal("player_entered_finish")
+	if (body == player):
+		emit_signal("player_entered_finish")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
