@@ -151,12 +151,9 @@ to use a signal first make a signal variable.
 ```python
 signal damege_player(amount)
 ```
-in
-```python
-func _ready():
-```
-set a variable equal to the node you want this script to send signals to, using get_node(nodepath).
-then connect it using connect(signalName, whereToSend, nameOfFunctionToCall)
+in ```func _ready():``` set a variable equal to the node you want this script to send signals to, using ```get_node(nodepath)```.
+then connect it using ```connect("signalName", nodeYouAreSignaling, "nameOfFunctionToCall")``` <br>
+Use ```emit_signal("signalName", anyParameters)``` to send the signal. <br>
 
 ex.
 ```python
