@@ -51,8 +51,8 @@ var player
 
 func _ready():
 	testLevel = Level.new(load("res://scenes/testLevel.tscn"), 1)
-	menu =Level.new(load("res://scenes/menu.tscn"), 10)
-	level2 =Level.new(load("res://scenes/scene2.tscn"), 11)
+	menu =Level.new(load("res://scenes/menu.tscn"), 11)
+	level2 =Level.new(load("res://scenes/level2.tscn"), 10)
 	deathMenu =Level.new(load("res://scenes/deathMenu.tscn"),100)
 	level3 =Level.new(load("res://scenes/level3.tscn"),101)
 	exampleLevel =Level.new(load("res://scenes/exampleScene.tscn"),110)
