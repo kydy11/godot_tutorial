@@ -10,6 +10,7 @@ Name your project <br>
 # Objects:
 select custom node (left). <br>
 Create a KinematicBody, StaticBody, or Area2D. <br>
+Rename it to what you want this object to be.(ex. Player or Block) <br>
 Add a sprite and a CollisionShape2D to that. <br>
 Add a texture to the sprite.  (load it from resources) <br>
 ![](https://github.com/kydy11/godotThing/blob/master/totorialImages/texture.png) <br>
@@ -29,7 +30,8 @@ Use this method to create several objects including your player and platform obj
 ###### all code in this section can be found in scripts/game.gd.
 Your game will be made up of scenes.<br>
 I suggest you have one base scene that runs your other scenes using script. <br>
-Create a new scene called "game" or "base". <br>
+Create a new scene. <br>
+Select Node2D, rename it to "game" or "base".  Save the scene. <br>
 ![](https://github.com/kydy11/godotThing/blob/master/totorialImages/new%20scene.png) <br>
 Go to project settings, in run, change the main scene to your base scene.<br>
 ![](https://github.com/kydy11/godotThing/blob/master/totorialImages/project.png) <br>
@@ -162,7 +164,7 @@ extends Area2D
 signal damege_player(amount)
 
 func _ready():
-	var player =get_node("/root/Node2D/Player")
+	var player =get_node("/root/Game/Node2D/Player")
 	connect("body_entered", self, "on_body_entered")
 	connect("damege_player", player , "recieve_damege")
 func on_body_entered(body):
