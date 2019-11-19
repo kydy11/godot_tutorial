@@ -132,16 +132,17 @@ To account for gravity, move the object, and reset velocity when it collides.<br
 Standard collisions are automatically handled stopping movement, but if you need a collision with a different effect, for example doing damage or triggering an effect, you should use areas.<br>
 Anything that you want to have a special collision add a area2D to.<br>
 Add a collision shape to the area, set it up the same way as previous collision shapes.<br>
-Add a script to the aree.<br>
-In the _ready function, put connect().<br>
+Add a script to the area.<br>
+In the ```_ready():``` function, put connect().<br>
 The first parameter in connect is what you want to be detected. For example, if you want to detect a body entering use "body_entered", if you want to detect an area exiting use "area_exited".<br>
-The second parameter should most always be self.
+The second parameter should probably be self.
 The third parameter is the name of the function you want activated by something entering or exiting. For example you could name something "on_body_enter".<br>
 
 ex.
 ```python
 func _ready():
     connect("body_entered", self, "on_body_entered")
+    
 func on_body_entered(body):
 	print("stuff")
 ```
@@ -163,12 +164,16 @@ extends Area2D
 
 signal damege_player(amount)
 
+var player
+
 func _ready():
-	var player =get_node("/root/Game/Node2D/Player")
+	player =get_node("/root/Game/Node2D/Player")
 	connect("body_entered", self, "on_body_entered")
 	connect("damege_player", player , "recieve_damege")
+	
 func on_body_entered(body):
-	emit_signal("damege_player", 2)
+	if (body == player):
+		emit_signal("damege_player", 2)
 ```
 with:
 ```python
@@ -178,5 +183,19 @@ func recieve_damege(amount):
 in the other script.
 
 you can get the nodePath of a node by putting ``` print(self.get_path()) ```
-in its ready script.
+in its ready script. <br>
+
+To change levels use a signal to activate a function in your base or game script, in that function use if statements with the numbers assigned to your levels to decide what to input into your change_scene function. <br>
+<br>
+ex.
+```python
+func finished_level():
+	if currantLevel.get_level_numb() == level1.get_level_numb():
+		change_scene(level2)
+	elif currantLevel.get_level_numb() == level2.get_level_numb():
+		change_scene(level3)
+```
+
+
+
 
