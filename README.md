@@ -10,8 +10,9 @@ Name your project <br>
 # Objects:
 Select custom node as the root node (left). <br>
 Create a KinematicBody2D, StaticBody2D, or Area2D. <br>
-Use a kinematic body for anything that moves with standard collisions, and a static body for anything with a standard collision that doesn't move. <br>
-Use an area for anything you want an effect other than stopped movement with collision. <br>
+Use a kinematic body for anything that moves with standard collisions. <br>
+Use a static body for anything with a standard collision that doesn't move. <br>
+Use an area for anything you want an effect other than stopped movement with collision. (ex. dealing damage) <br>
 Rename it to what you want this object to be.(ex. Player or Block) <br>
 Add a sprite and a CollisionShape2D to that. <br>
 Add a texture to the sprite.  (load it from resources) <br>
