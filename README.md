@@ -144,7 +144,7 @@ go to your player object. <br>
 add a Camera2D to it. <br>
 tell the camera to be the current camera. <br>
 ![](https://github.com/kydy11/godotThing/blob/master/totorialImages/current%20camera.png) <br>
-I suggest you try turning on and adjusting smoothing, and adjusting the drag margin, to see what you prefere.
+I suggest you try turning on and adjusting smoothing, and adjusting the drag margin, to have the camera move the way you prefer.
 
 
 # Area collisions:
