@@ -126,6 +126,8 @@ func level4_bt_pressed():
 	change_scene(exampleLevel)
 func level5_bt_pressed():
 	change_scene(level4)
+func level6_bt_pressed():
+	change_scene(level5)
 
 func to_menu():
 	change_scene(menu)
