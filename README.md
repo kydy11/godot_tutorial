@@ -1,5 +1,5 @@
 # Tutorial:
-this is a godot tutorial for 2d platformer games, it doesn't tell you excactly what to make or how to make it, it does teach you how use the system to create your game the way you want it. <br> 
+this is a godot tutorial for 2d platformer games, it doesn't tell you exactly what to make or how to make it, it does teach you how to use the system to create your game the way you want it. <br> 
 <br>
 this tutorial will teach you how to: <br>
 create objects (level components), <br>
