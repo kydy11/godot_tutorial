@@ -215,6 +215,8 @@ func finished_level():
 		change_scene(level3)
 ```
 
-
+# Menu and HUD:
+Create a new scene, select user interface.
+Add a Button. 
 
 
