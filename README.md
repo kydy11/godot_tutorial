@@ -1,3 +1,13 @@
+# Tutorial:
+this is a godot tutorial for 2d platformer games, it doesn't tell you excactly what to make or how to make it, it does teach you how use the system to create your game the way you want it. <br> 
+<br>
+this tutorial will teach you how to: <br>
+create objects (level components), <br>
+create scenes (levels), <br>
+create a movement system, <br>
+and communicate between object scripts <br>
+
+
 # Start project:
 When godot opens push new project (right side) <br>
 Select browse <br>
@@ -129,7 +139,12 @@ if move_and_slide(velocity/2)[0]==0:
 	velocity.x =0
 ```
 To account for gravity, move the object, and reset velocity when it collides.<br>
-
+<br>
+go to your player object. <br>
+add a Camera2D to it. <br>
+tell the camera to be the current camera. <br>
+![](https://github.com/kydy11/godotThing/blob/master/totorialImages/current%20camera.png) <br>
+I suggest you try turning on and adjusting smoothing, and adjusting the drag margin, to see what you prefere.
 
 
 # Area collisions:
