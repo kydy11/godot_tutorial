@@ -8,15 +8,17 @@ Name your project <br>
 
 
 # Objects:
-select custom node (left). <br>
-Create a KinematicBody, StaticBody, or Area2D. <br>
+Select custom node as the root node (left). <br>
+Create a KinematicBody2D, StaticBody2D, or Area2D. <br>
+Use a kinematic body for anything that moves with standard collisions, and a static body for anything with a standard collision that doesn't move. <br>
+Use an area for anything you want an effect other than stopped movement with collision. <br>
 Rename it to what you want this object to be.(ex. Player or Block) <br>
 Add a sprite and a CollisionShape2D to that. <br>
 Add a texture to the sprite.  (load it from resources) <br>
 ![](https://github.com/kydy11/godotThing/blob/master/totorialImages/texture.png) <br>
 In collision shape add a shape. <br>
 ![](https://github.com/kydy11/godotThing/blob/master/totorialImages/shape%20add.png) <br>
-Click on the shape, set it's extend/radius/other, to set its size. <br>
+Click on the shape, set it's extents/radius/other, to set its size. <br>
 ![](https://github.com/kydy11/godotThing/blob/master/totorialImages/collision%20size.png) <br>
 On sprite, in transform adjust scale to the size you want. <br>
 ![](https://github.com/kydy11/godotThing/blob/master/totorialImages/transform.png) <br>
@@ -85,7 +87,8 @@ Create a new scene for your first level. Select node2D. <br>
 Build your levels out of objects. <br>
 You can add an object to your scene with this button: <br>
 ![](https://github.com/kydy11/godotThing/blob/master/totorialImages/connect%20scene.png) <br>
-Use the objects you have made and create new objects as you need them to build this level. <br> <br>
+Use the objects you have made and create new objects as you need them to build this level. <br>
+I suggest adding objects from the least animated to the most animated. (platforms first, player last) <br>
 
 Example of a level built from objects: <br>
 ![](https://github.com/kydy11/godotThing/blob/master/totorialImages/scene%20of%20objects.PNG) <br>
