@@ -65,13 +65,14 @@ func _ready():
 	#menu =menu.newLevel(load("res://scenes/menu.tscn"), 10)
 	#level2 =level2.newLevel(load("res://scenes/scene2.tscn"), 11)
 	
-	currantLevel =menu
-	add_child(currantLevel.get_level_instance())
+	#currantLevel =menu
+	#add_child(currantLevel.get_level_instance())
+	change_scene(menu)
 
 func change_scene(scene):
-	
-	currantLevel.get_level_instance().call_deferred("free")
-	lastLevel=currantLevel
+	if(currantLevel !=null):
+		currantLevel.get_level_instance().call_deferred("free")
+		lastLevel=currantLevel
 	currantLevel =scene
 	currantLevel.reset_scene()
 	call_deferred("add_child", currantLevel.get_level_instance())
