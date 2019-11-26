@@ -218,7 +218,29 @@ func finished_level():
 ```
 
 # Menu and HUD:
-Create a new scene, select user interface.
-Add a Button. 
+Create a new scene, select user interface. <br>
+Add a Button. <br>
+Either change the position and size by dragging, and using the orange circles, or open Rect on the button and set position and size there. <br>
+![](https://github.com/kydy11/godotThing/blob/master/totorialImages/button%20sizing.png) <br>
+Create a script for the button. <br>
+In ```func _ready():``` create a variable for the base node. And connect the signal "pressed" to a function in your base scene script that will change the scene to your first level. <br>
+Ex.
+```python
+extends Button
 
+func _ready():
+	var game =get_node("/root/Game")
+	connect("pressed", game, "start_bt_pressed")
+```
+Save it in a folder for your button scripts.  You will need to have a different script for almost every button, the only difference in the script will be the function called. <br>
+Save your scene as "menu"<br>
+<br>
+You can use this design to build other menu type scenes. (ex. level select)<br>
+<br>
+To build a HUD: (head-up display)<br>
+Create a new scene. <br>
+Select custom node. <br>
+Select CanvasLayer. <br>
+Add whatever buttons or visuals you want to that and save it as HUD. <br>
+In your player object, add your HUD object.
 
