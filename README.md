@@ -49,6 +49,8 @@ Select Node2D, rename it to "game" or "base".  Save the scene. <br>
 Go to project settings, in run, change the main scene to your base scene.<br>
 ![](https://github.com/kydy11/godotThing/blob/master/totorialImages/project.png) <br>
 ![](https://github.com/kydy11/godotThing/blob/master/totorialImages/change%20main%20scene.png) <br>
+Create a script for the base scene. <br>
+![](https://github.com/kydy11/godotThing/blob/master/totorialImages/add%20script.png) <br>
 In the base scene script:<br>
 Either make a variable for each scene and load them in the ready function.  Make a currant scene variable.  In &#95;ready set currant scene to one of your scenes, use: ```add_child(currantScene.instance())```
 <br>
