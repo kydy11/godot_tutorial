@@ -88,8 +88,9 @@ Use ```(scene instance).call_deferred("free")``` to remove a scene, then ```call
 ex.
 ```python
 func change_scene(scene):
-	currantLevel.get_level_instance().call_deferred("free")
-	lastLevel =currantLevel
+	if (currantLevel != null):
+		currantLevel.get_level_instance().call_deferred("free")
+		lastLevel =currantLevel
 	currantLevel =scene
 	currantLevel.reset_scene()
 	call_deferred("add_child", currantLevel.get_level_instance())
@@ -105,6 +106,9 @@ I suggest adding objects from the least animated to the most animated. (platform
 
 Example of a level built from objects: <br>
 ![](https://github.com/kydy11/godotThing/blob/master/totorialImages/scene%20of%20objects.PNG) <br>
+
+In your base scene script. <br>
+Put ```change_scene(level1)``` at the end of the ```_ready()``` function.<br>
 
 # Input map:
 
@@ -234,6 +238,7 @@ func _ready():
 ```
 Save it in a folder for your button scripts.  You will need to have a different script for almost every button, the only difference in the script will be the function called. <br>
 Save your scene as "menu"<br>
+In your base scene script, change the scene changed to in the ```_ready()``` funcion, to your menu.<br>
 <br>
 You can use this design to build other menu type scenes. (ex. level select)<br>
 <br>
